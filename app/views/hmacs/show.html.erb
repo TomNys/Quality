@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key:</strong>
+  <%= @hmac.key %>
+</p>
+
+<p>
+  <strong>Secret:</strong>
+  <%= @hmac.secret %>
+</p>
+
+<p>
+  <strong>Hmac:</strong>
+  <%= @hmac.hmac %>
+</p>
+
+<%= link_to 'Edit', edit_hmac_path(@hmac) %> |
+<%= link_to 'Back', hmacs_path %>
