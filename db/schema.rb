@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412184528) do
+ActiveRecord::Schema.define(version: 20150418142542) do
 
   create_table "csrfattacks", force: :cascade do |t|
     t.string   "professor"
     t.integer  "vote"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hmacs", force: :cascade do |t|
+    t.string   "key"
+    t.string   "secret"
+    t.string   "hmac"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
