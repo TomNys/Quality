@@ -15,7 +15,6 @@
   <% @csrfattacks.each do |csrfattack| %>
         <tr><td><%= csrfattack.professor %></td>
         <td><%= csrfattack.vote %></td>
-        <td><%= button_to "VOTE", csrfattack, :method=> :patch %></tr>
   <% end %>
   </tbody>
 </table>
