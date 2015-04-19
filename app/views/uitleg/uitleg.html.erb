@@ -6,9 +6,11 @@
 </head>
 <body>
     <h1>Welkom bij het startscherm van de opdracht gemaakt door: Tom Nys</h1>
-    <p>Voor de opdracht rond dom0 kan u naar de static html gaan die bij in de mail is geleverd "dom0 Example.html"</p>
+    <p>Voor de opdracht rond dom0 kan u naar onderstaande link gaan of naar de statische html gaan die bij in de mail is geleverd "dom0 Example.html"</p>
+    <%= link_to "Link naar dom0", controller: :dom0s %>
     <p>Voor CSRF kan u op "Link naar CSRF" klikken om de huidige staat van de "Beste persoon van het jaar wedstrijd" te raadplegen.
       daarna kan u de html-pagina "volledig veilige site.html" openen in een webbrowser, daarna kan u het resultaat terug met onderstaande link bekijken</p>
     <%= link_to "Link naar CSRF", controller: :csrfattacks %>
+    <%= link_to "Link naar RS", controller: :splittings %>
 </body>
 </html>

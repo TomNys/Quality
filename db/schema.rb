@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150418142542) do
+ActiveRecord::Schema.define(version: 20150418173302) do
 
   create_table "csrfattacks", force: :cascade do |t|
     t.string   "professor"
@@ -20,10 +20,20 @@ ActiveRecord::Schema.define(version: 20150418142542) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "dom0s", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hmacs", force: :cascade do |t|
     t.string   "key"
     t.string   "secret"
     t.string   "hmac"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "splittings", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

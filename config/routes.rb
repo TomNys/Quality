@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :splittings
+
+  resources :dom0s
+
   resources :hmacs
 
   resources :csrfattacks

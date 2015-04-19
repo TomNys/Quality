@@ -1,0 +1,17 @@
+<%= form_for(@splitting) do |f| %>
+  <% if @splitting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@splitting.errors.count, "error") %> prohibited this splitting from being saved:</h2>
+
+      <ul>
+      <% @splitting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
