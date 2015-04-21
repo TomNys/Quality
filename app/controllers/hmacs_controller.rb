@@ -25,6 +25,10 @@ class HmacsController < ApplicationController
   # POST /hmacs.json
   def create
     @hmac = Hmac.new(hmac_params)
+    @hmac.digest = OpenSSL::Digest.new(@hmac.hashalgorithme)
+    @hmac.hmac = OpenSSL::HMAC.new(@hmac.key, OpenSSL::Digest.new(@hmac.hashalgorithme))
+    #@hmac.digest = OpenSSL::Digest.new(@hmac.hashalgorithme)
+    #@hmac.hmac = OpenSSL::HMAC.digest(@hmac.digest, @hmac.key, @hmac.secret)
 
     respond_to do |format|
       if @hmac.save
@@ -69,6 +73,6 @@ class HmacsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def hmac_params
-      params.require(:hmac).permit(:key, :secret, :hmac)
+      params.require(:hmac).permit(:key, :secret, :hashalgorithme)
     end
 end

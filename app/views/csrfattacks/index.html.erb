@@ -11,11 +11,12 @@
   </thead>
 
   <tbody>
-
+  <tr>
   <% @csrfattacks.each do |csrfattack| %>
-        <tr><td><%= csrfattack.professor %></td>
+        <td><%= csrfattack.professor %></td>
         <td><%= csrfattack.vote %></td>
   <% end %>
+   </tr>
   </tbody>
 </table>
 

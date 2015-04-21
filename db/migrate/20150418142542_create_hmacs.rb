@@ -4,6 +4,8 @@ class CreateHmacs < ActiveRecord::Migration
       t.string :key
       t.string :secret
       t.string :hmac
+      t.string :hashalgorithme
+      t.string :digest
 
       t.timestamps null: false
     end
