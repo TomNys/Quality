@@ -29,10 +29,8 @@ ActiveRecord::Schema.define(version: 20150418173302) do
     t.string   "key"
     t.string   "secret"
     t.string   "hmac"
-    t.string   "hmachexdigest"
     t.string   "hashalgorithme"
     t.string   "digest"
-    t.string   "hexdigest"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
